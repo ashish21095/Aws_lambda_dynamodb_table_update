@@ -1,1 +1,2 @@
 # Aws_lambda_dynamodb_table_update
+This script defines a Lambda function that is triggered by an S3 event when a new file is put in the bucket. The function downloads the file from S3, parses it as a CSV file using the `csv` module, and iterates over the rows in the file. For each row, it uses the `get_item` method of the DynamoDB client to check if the item with the specified ID already exists in the `my_table` DynamoDB table. If the item exists then it will update the item in the table
